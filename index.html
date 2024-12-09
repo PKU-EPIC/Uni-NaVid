@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Uni-NaVid</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon_2.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<style>
+
+
+  
+  .video-container {
+    width: 30%; /* 每个容器宽度为页面宽度的32%，根据实际情况调整 */
+    display: inline-block; /* 使容器并列排列 */
+    margin: 1%; /* 添加外边距 */
+    vertical-align: top;
+  }
+
+  video {
+    width: 100%; /* 视频宽度填满容器 */
+    display: block; /* 确保视频占满整个容器宽度 */
+  }
+
+  .description {
+    text-align: center; /* 文字居中对齐 */
+  }
+
+  .text-image-container {
+    display: flex; /* 使用弹性盒模型布局 */
+    align-items: flex-start; /* 上端对齐 */
+    justify-content: center;
+}
+
+ul {
+  text-align: left; /* 确保文本左对齐 */
+  list-style-position: inside; /* 列表标记与文本对齐 */
+  font-size: 16px;
+  list-style-type: circle; /* 使用圆形作为项目符号 */
+
+}
+
+
+</style>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          
+          <img src="static/images/icon.jpg" alt="icon" style="width: 22%;">
+
+          <h1 class="title is-1 publication-title">A Video-based Vision-Language-Action Model for Unifying Embodied Navigation Tasks</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <!-- <span class="author-block"><a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jiazhao Zhang</a><sup>1,2,*</sup>,</span> -->
+              <span class="author-block">
+                <a href="https://jzhzhang.github.io/">Jiazhao Zhang</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Kunyu Wang<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com.hk/citations?user=_IUq7ooAAAAJ">Shaoan Wang</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/GengzeZhou">Minghan Li</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://yiconghong.me/">Haoran Liu</a><sup>1,2</sup>
+              </span>
+              <span class="author-block" style="display: block;">
+                <a href="https://songlin.github.io/">Songlin Wei</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.wangzhongyuan.com/">Zhongyuan Wang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ">Zhizheng Zhang</a><sup>2,3†</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,3,†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+              <span class="author-block"><sup>1</sup>Peking University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>2</sup>GalBot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>3</sup>Beijing Academy of Artificial Intelligence
+              </span>
+            </div>
+
+
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2402.15852.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=IHkDuJZV0I8" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-video"></i>
+                  </span>
+                  <span>Code (Comming soon)</span>
+                </a>
+                </span> -->
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (soon)</span>
+                </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2402.15852" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+  
+            <!-- <div class="text">
+              Robotics: Science and Systems (RSS 2024)
+            </div> -->
+
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+      <h2>
+      <!-- <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2> -->
+      <div class="text-image-container title is-3">
+        <div>
+          <img src="static/images/highlight_logo.png" alt="示例图片" width="50">
+      </div>
+        <div class="text">
+            <p>Highlights</p>
+        </div>
+    </div>
+  </h2>
+
+
+
+      <!-- <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p> -->
+      <ul>
+        <li><b>Uni-NaVid is the first video-based Vision-Language Model (VLM) designed to unify diverse navigation tasks.</b></li>
+        <li><b>Uni-NaVid is highly efficient, achieving nearly 5 Hz inference.</b></li>
+        <li><b>Uni-NaVid collects 3.6 million navigation data samples across VLN, ObjectNav, EQA, and human-following tasks.</b></li>
+        <li><b>Uni-NaVid achieves SOTA performance across general navigation benchmarks and demonstrates strong generalizability in real-world environments.</b></li>
+      </ul>
+
+      
+
+    </div>
+
+  </div>
+  
+</section>
+
+
+
+<section class="hero is-small">
+
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+      <h2>
+      <!-- <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2> -->
+      <div class="text-image-container title is-3">
+        <div>
+          <img src="static/images/teaser.png" alt="teaser" >
+      </div>
+        <!-- <div class="text">
+            <p>Highlights</p>
+        </div> -->
+    </div>
+  </h2>
+
+    </div>
+
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Teaser video 1 -->
+<section class="hero is-small">
+
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+
+
+
+      <h2 class="title is-3">Performance on Compositional Navigation Tasks </h2>
+      <p> <b>We deploy Uni-Navid in real-world environments to complete compositional instructions for multiple navigation tasks.</b></p>
+      <!-- <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p> -->
+
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+
+
+
+
+        <div class="item item-video1_1">
+          <video poster="" id="video1_1" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/com_navigation/video_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1_3">
+          <video poster="" id="video18" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/com_navigation/video_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1_5">
+          <video poster="" id="video19" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/com_navigation/video_5.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1_9">
+          <video poster="" id="video9" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/com_navigation/video_9.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End teaser video 1 -->
+
+<!-- Teaser video 2 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Performance on Individual Navigation Task </h2>
+      <p> <b>We deploy Uni-Navid in real-world environments to complete instructions for individual navigation tasks.</b></p>
+      <!-- <p> <b>Real-world demos by following complex instructions, which consist of several simple instructions.</b></p> -->
+
+      <div id="results-carousel-teaser2" class="carousel results-carousel">
+        <div class="item item-video2_2">
+          <video poster="" id="video10" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/simple_navigation/video_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2_4">
+          <video poster="" id="video11" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/simple_navigation/video_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2_6">
+          <video poster="" id="video12" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/simple_navigation/video_6.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2_7">
+          <video poster="" id="video12" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/simple_navigation/video_7.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2_8">
+          <video poster="" id="video12" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/simple_navigation/video_8.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+     <!-- <h2 class="subtitle has-text-centered">
+       Real-world demo of our proposed video-based VLM, NaVid, for vision-and-language navigation. Given the human instruction, NaVid only takes online RGB video frames as input and outputs a language action for robotic execution.
+     </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser video 2 -->
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            A practical navigation agent must be capable of handling a wide range of interaction demands, such as following instructions, searching objects, answering questions, tracking people, and more.Existing models for embodied navigation fall short of serving as practical generalists in the real world, as they are often constrained by specific task configurations or pre-defined maps with discretized waypoints. In this work, we present Uni-NaVid, the first video-based vision-language-action (VLA) model designed to unify diverse embodied navigation tasks and enable seamless navigation for mixed long-horizon tasks in unseen real-world environments. Uni-NaVid achieves this by harmonizing the input and output data configurations for all commonly used embodied navigation tasks and thereby integrating all tasks in one model. For training \name, we collect 3.6 million navigation data samples in total from four essential navigation sub-tasks and foster synergy in learning across them. Extensive experiments on comprehensive navigation benchmarks clearly demonstrate the advantages of unification modeling in Uni-NaVid and show it achieves state-of-the-art performance. Additionally, real-world experiments confirm the model's effectiveness and efficiency, shedding light on its strong generalizability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- YouTube Video-->
+
+
+
+
+<!-- \textbf{Pipeline of \name.} Our method takes only single-view RGB frames $\{\mathbf{x}_1, \cdots, \mathbf{x}_T\}$ and a natural language instruction $\cI$ as input. For each frame, we extract 64 visual tokens using the vision encoder and then use online token merging to accelerate the model while retaining compact visual information. The merged tokens and instruction tokens are sent to the large language model to obtain actions for navigation or answers for embodied question-answering. -->
+
+
+<!-- The inputs of NaVid consist of the RGB frames from the online video observation {x<sub>0</sub>, · · · , x<sub>t</sub>} along with the human instruction I. For each frame, we use an observation encoder to extract the visual information with the instruction to obtain observation tokens, including, instruction-queried tokens (orange blocks) and instruction-agnostic tokens (blue blocks). At the current step t, the history frames and current frame x<sub>t</sub> are encoded as observation tokens, with 4 and 64 instruction-agnostic tokens for history frames and current frames, respectively. Besides, our method obtains language tokens by a text encoder. Finally, split by the special tokens [HIS], [OBS], and [NAV], we concatenate the observation tokens and language tokens and send the tokens to the Vicuna-7B then obtain the next-step action. -->
+
+<!-- Method Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+          <div class="content">
+            <h2 class="title is-3">Method Overview</h2>
+            <img src="static/images/method.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                <b>The overview of Uni-NaVid.</b> Our method takes only single-view RGB frames { x<sub>1</sub>, · · ·, x<sub>T</sub> } and a natural language instruction as input. For each frame, we extract 64 visual tokens using the vision encoder and then use online token merging to accelerate the model while retaining compact visual information. The merged tokens and instruction tokens are sent to the large language model to obtain actions for navigation or answers for embodied question-answering.
+              </p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+          <div class="content">
+            <h2 class="title is-3">Data Collection  (Navigation 3.6M + VQA 2.3M)</h2>
+            <img src="static/images/data_ratio.png" alt="NaVid" class="center-image blend-img-background" width="75%">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                <div><b style="color: #89a2d4;">Vision-and-Language Navigation
+                  </b>: requires the agent to comprehend language instructions in order to follow the described path. We collect 2.4M samples based on both VLN-CE R2R and VLN-CE RxR.</div>
+                <div><b style="color: #e9aa7f;">Object Goal Navigation</b>: involves the agent navigating an environment to locate a specific object based on provided visual or linguistic cues. We gather 483k samples from datasets on Habitat Matterport 3D datase</div>
+                <div><b style="color: #f5d46d;">Embodied Question Answering</b>: requires the agent to navigate to the related area for question answering. We collect 240k video-action samples and 10k video-answering samples on the EQA dataset on Matterport 3D environments.</div>
+                <div><b style="color: #a5c788;">Human Following</b>: requires the agent to track and follow a human target with a specific description in dynamic and crowded environment. We collect 544k human-following navigation samples.</div>
+
+              </p>
+              <p class="has-text-justified">
+                <!-- <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b> -->
+              </p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- End video carousel R2R -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Vision-and-Language Navigation </h2>
+      <h3 class="title is-5">VLN-CE RxR Val-Unseen</h2>
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+
+
+        <div class="item item-video12">
+          <video poster="" id="video12" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/vln/3332.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video10">
+          <video poster="" id="video10" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/vln/298.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/vln/912.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video13">
+          <video poster="" id="video13" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/vln/3425.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video14">
+          <video poster="" id="video14" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/vln/3695.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Image carousel 3 RxR -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3"> Object Goal Navigation</h2>
+      <h2 class="title is-5"> HM3D ObjectNav </h2>
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+
+
+        <div class="item item-video16">
+          <video poster="" id="video16" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/objnav/0_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/objnav/0_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video18">
+          <video poster="" id="video18" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/objnav/1_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/objnav/1_78.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/objnav/2_78.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Embodied Question Answering</h2>
+      <h2 class="title is-5"> MP3D-EQA </h2>
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+        <div class="item item-video20">
+          <video poster="" id="video20" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/eqa/5_49.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video16">
+          <video poster="" id="video16" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/eqa/0_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/eqa/1_25.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video18">
+          <video poster="" id="video18" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/eqa/1_65.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/eqa/2_16.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="100%">
+            <source src="static/videos/eqa/4_16.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Human Following</h2>
+      <!-- <h2 class="title is-5"> Requiring the agent to follow a person who satisfies the description. </h2> -->
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+
+
+        <div class="item item-video16">
+          <video poster="" id="video16" autoplay playsinline controls muted  height="70%">
+            <source src="static/videos/following/1.mp4"
+            type="video/mp4">
+            <!-- <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English"> -->
+          </video>
+        </div>
+
+        <div class="item item-video17">
+          <video poster="" id="video17" autoplay playsinline controls muted  height="70%">
+            <source src="static/videos/following/44.mp4"
+            type="video/mp4">
+          </video>
+
+        </div> 
+        <div class="item item-video18">
+          <video poster="" id="video18" autoplay playsinline controls muted  height="70%">
+            <source src="static/videos/following/1730291116.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="70%">
+            <source src="static/videos/following/1730291647.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video19">
+          <video poster="" id="video19" autoplay playsinline controls muted  height="70%">
+            <source src="static/videos/following/1730292002.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{zhang2024navid,
+        title={NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation},
+        author={Zhang, Jiazhao and Wang, Kunyu and Xu, Rongtao and Zhou, Gengze and Hong, Yicong and Fang, Xiaomeng and Wu, Qi and Zhang, Zhizheng and Wang, He},
+        journal={arXiv preprint arXiv:2402.15852},
+        year={2024}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
